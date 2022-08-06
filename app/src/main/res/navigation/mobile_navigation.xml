@@ -9,17 +9,31 @@
         android:id="@+id/nav_home"
         android:name="com.example.unseenfamily.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_donationDetailsFragment"
+            app:destination="@id/donationDetailsFragment" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.unseenfamily.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_donation_history"
+        android:name="com.example.unseenfamily.ui.donation_history.DonationHistoryFragment"
+        android:label="@string/donation_history"
+        tools:layout="@layout/fragment_donation_history" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_logout"
         android:name="com.example.unseenfamily.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/donationDetailsFragment"
+        android:name="com.example.unseenfamily.ui.DonationDetailsFragment"
+        android:label="fragment_donation_details"
+        tools:layout="@layout/fragment_donation_details" >
+        <action
+            android:id="@+id/action_donationDetailsFragment_to_nav_home2"
+            app:destination="@id/nav_home"
+            app:popUpTo="@id/nav_home" />
+    </fragment>
 </navigation>
