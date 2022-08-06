@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1034136726990",
+    "project_id": "mad-unseenfamily",
+    "storage_bucket": "mad-unseenfamily.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1034136726990:android:b2ad2b2dbf6839bf0f8f9f",
+        "android_client_info": {
+          "package_name": "com.example.unseenfamily"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1034136726990-5hfn047jiedfm3jh6h2gbkt7b8lbr0g4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.unseenfamily",
+            "certificate_hash": "ba49fac3b713303e07e2f4405da49ed79c7f40c9"
+          }
+        },
+        {
+          "client_id": "1034136726990-dfmcc2g8p9pe5qgaqp96knorf2631q3n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQkwi3XKqjen5qNzflpESTq6KcigzxHp8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1034136726990-dfmcc2g8p9pe5qgaqp96knorf2631q3n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
