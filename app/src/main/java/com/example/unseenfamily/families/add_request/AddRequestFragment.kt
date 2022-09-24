@@ -6,12 +6,14 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.unseenfamily.R
 import com.example.unseenfamily.adapter.DonationItemAdapter
 import com.example.unseenfamily.databinding.FragmentAddRequestBinding
 import com.example.unseenfamily.entities.Donation
 import com.example.unseenfamily.entities.DonationItem
 import com.example.unseenfamily.entities.DonationWithDonationItems
 import com.example.unseenfamily.viewModel.DonationViewModel
+
 
 class AddRequestFragment : Fragment() {
 
@@ -74,7 +76,20 @@ class AddRequestFragment : Fragment() {
 
             binding.buttonSave.setOnClickListener {
                 val titleText = binding.editTextTitle.text.toString()
+                if(titleText.isEmpty()){
+                    binding.editTextTitle.error = getString(R.string.title_required)
+                    binding.editTextTitle.requestFocus()
+                    return@setOnClickListener
+                }
                 val descriptionText = binding.editTextDescription.text.toString()
+                if(descriptionText.isEmpty()){
+                    binding.editTextDescription.error = getString(R.string.title_required)
+                    binding.editTextDescription.requestFocus()
+                    return@setOnClickListener
+                }
+                if(donationItemList.isEmpty()){
+                    Toast.makeText(context, getString(R.string.items_required), Toast.LENGTH_SHORT).show()
+                }
                 val tempDonation = DonationWithDonationItems( Donation(titleText, descriptionText, "123"), donationItemList.toList() )
                 donationViewModel.insert(tempDonation)
             }
