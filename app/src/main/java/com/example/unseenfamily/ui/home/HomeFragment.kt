@@ -1,6 +1,5 @@
 package com.example.unseenfamily.ui.home
 
-import android.R
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.unseenfamily.databinding.FragmentHomeBinding
+import com.example.unseenfamily.R
 
 class HomeFragment : Fragment() {
 
@@ -36,9 +36,9 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.scrollViewLinearLayout.forEach {
+        binding.recycleView.forEach {
             it.setOnClickListener {
-                findNavController().navigate(com.example.unseenfamily.R.id.action_nav_home_to_donationDetailsFragment)
+                findNavController().navigate(R.id.action_nav_home_to_donationDetailsFragment)
             }
         }
     }

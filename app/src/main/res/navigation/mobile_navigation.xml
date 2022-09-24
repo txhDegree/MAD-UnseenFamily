@@ -22,18 +22,23 @@
         tools:layout="@layout/fragment_donation_history" />
 
     <fragment
-        android:id="@+id/nav_logout"
-        android:name="com.example.unseenfamily.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_my_request"
+        android:name="com.example.unseenfamily.families.families_request.FamiliesRequestFragment"
+        android:label="@string/my_request"
+        tools:layout="@layout/fragment_families_requests" >
+        <action
+            android:id="@+id/action_nav_my_request_to_nav_add_request"
+            app:destination="@id/nav_add_request"
+            app:popUpTo="@id/nav_my_request" />
+    </fragment>
     <fragment
         android:id="@+id/donationDetailsFragment"
         android:name="com.example.unseenfamily.ui.DonationDetailsFragment"
-        android:label="fragment_donation_details"
-        tools:layout="@layout/fragment_donation_details" >
-        <action
-            android:id="@+id/action_donationDetailsFragment_to_nav_home2"
-            app:destination="@id/nav_home"
-            app:popUpTo="@id/nav_home" />
-    </fragment>
+        android:label="Donation Details"
+        tools:layout="@layout/fragment_donation_details"/>
+    <fragment
+        android:id="@+id/nav_add_request"
+        android:name="com.example.unseenfamily.families.add_request.AddRequestFragment"
+        android:label="@string/add_request"
+        tools:layout="@layout/fragment_add_request" />
 </navigation>

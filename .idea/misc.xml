@@ -4,17 +4,35 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/drawable/ic_baseline_chat_24.xml" value="0.1935" />
+        <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/drawable/ic_baseline_circle_24.xml" value="0.32" />
+        <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.32" />
         <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/drawable/ic_baseline_mark_chat_unread_24.xml" value="0.1935" />
+        <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/drawable/ic_baseline_save_24.xml" value="0.32" />
         <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.359" />
+        <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/drawable/record_divider.xml" value="0.32" />
+        <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/activity_login.xml" value="0.3625" />
         <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/activity_main.xml" value="0.35280797101449274" />
         <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/app_bar_main.xml" value="0.3625" />
         <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/content_main.xml" value="0.35280797101449274" />
-        <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/donation_item.xml" value="0.75" />
+        <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/donation_item.xml" value="0.5" />
+        <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/donation_list_item.xml" value="0.25" />
+        <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/fragment_add_request.xml" value="0.5" />
         <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/fragment_donation_details.xml" value="0.5" />
+        <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/fragment_donation_history.xml" value="0.3625" />
+        <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/fragment_families_requests.xml" value="0.3625" />
         <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/fragment_gallery.xml" value="0.3625" />
         <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/fragment_home.xml" value="0.3625" />
-        <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/fragment_slideshow.xml" value="0.3625" />
+        <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/fragment_slideshow.xml" value="0.5" />
+        <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/layout_add_request_item.xml" value="0.271875" />
         <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/nav_header_main.xml" value="0.346875" />
+        <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/tabs.xml" value="0.3625" />
+        <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/tabs/fragment_all_request.xml" value="0.3625" />
+        <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/tabs/fragment_completed.xml" value="0.3625" />
+        <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/tabs/fragment_pending.xml" value="0.3484375" />
+        <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/tabs/layout/fragment_all_requests.xml" value="0.33" />
+        <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/tabs/layout/fragment_completed.xml" value="0.16614583333333333" />
+        <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/tabs/layout/fragment_requests_recycle_view.xml" value="0.3625" />
+        <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/layout/tabs/layout/layout/fragment_request_details.xml" value="0.3625" />
         <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/menu/activity_main_drawer.xml" value="0.5" />
         <entry key="..\:/Assignment/Unseen_Family/app/src/main/res/menu/main.xml" value="0.346875" />
       </map>

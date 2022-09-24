@@ -1,0 +1,51 @@
+package com.example.unseenfamily.families.families_request.tabs
+
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import com.example.unseenfamily.R
+import com.example.unseenfamily.entities.Donation
+import com.example.unseenfamily.entities.DonationWithDonationItems
+
+class VPRecycleViewAdapter(private val onClickListener: DonationOnClickListener): RecyclerView.Adapter<VPRecycleViewAdapter.ViewHolder>() {
+
+    private var dataSet = emptyList<DonationWithDonationItems>()
+
+    class ViewHolder (view: View) : RecyclerView.ViewHolder(view) {
+        val textViewTitle : TextView = view.findViewById<TextView>(R.id.textViewDonationItemTitle)
+        val textViewDescription: TextView = view.findViewById<TextView>(R.id.textViewDonationItemDescription)
+    }
+
+    internal fun setDonation(donationWithDonationItems: List<DonationWithDonationItems>) { // link new list to dataset during run time
+        dataSet = donationWithDonationItems
+        notifyDataSetChanged()
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.donation_item, parent, false)
+        return ViewHolder(view)
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val donationWithDonationItems = dataSet[position]
+        with(donationWithDonationItems){
+            holder.textViewTitle.text = donation.title
+            holder.textViewDescription.text = donation.description
+            holder.itemView.setOnClickListener{
+                onClickListener.onClick(donationWithDonationItems)
+            }
+        }
+    }
+
+    override fun getItemCount(): Int {
+        return dataSet.size
+    }
+
+    class DonationOnClickListener (val clickListener: (donationWithDonationItems: DonationWithDonationItems) -> Unit) {
+        fun onClick(donationWithDonationItems: DonationWithDonationItems) = clickListener(donationWithDonationItems)
+    }
+
+}

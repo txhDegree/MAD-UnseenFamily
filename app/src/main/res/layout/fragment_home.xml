@@ -13,54 +13,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
 
-    <ScrollView
-        android:id="@+id/scollViewDonations"
+    </SearchView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/searchView">
-
-        <LinearLayout
-            android:id="@+id/scrollViewLinearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <include layout="@layout/donation_item" />
-
-            <include layout="@layout/donation_item" />
-
-            <include layout="@layout/donation_item" />
-
-            <include layout="@layout/donation_item" />
-
-            <include layout="@layout/donation_item" />
-
-            <include layout="@layout/donation_item" />
-
-            <include layout="@layout/donation_item" />
-
-            <include layout="@layout/donation_item" />
-
-            <include layout="@layout/donation_item" />
-
-            <include layout="@layout/donation_item" />
-
-            <include layout="@layout/donation_item" />
-
-            <include layout="@layout/donation_item" />
-
-            <include layout="@layout/donation_item" />
-
-            <include layout="@layout/donation_item" />
-
-            <include layout="@layout/donation_item" />
-        </LinearLayout>
-
-    </ScrollView>
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        tools:listitem="@layout/donation_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

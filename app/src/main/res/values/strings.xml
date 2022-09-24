@@ -13,6 +13,27 @@
     <string name="logout">Logout</string>
     <string name="donation_history">Donation History</string>
     <string name="message">Message</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="my_request">My Request</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="description_hint">Enter Description (e.g. purpose of this request, total approximate cost etc…)</string>
+    <string name="add_request">Add Request</string>
+    <string name="needed_items">Needed Items</string>
+    <string name="needed_list_hint">Specific brand</string>
+    <string name="quantity_hint">Qty</string>
+    <string name="add">Add</string>
+    <string name="title_hint">Enter title (e.g.: Daily Supplies)</string>
+    <string name="delete">Delete</string>
+    <string name="no_record">No Record Found</string>
 </resources>
