@@ -5,6 +5,7 @@ import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.unseenfamily.R
 import com.example.unseenfamily.adapter.DonationItemAdapter
@@ -92,6 +93,8 @@ class AddRequestFragment : Fragment() {
                 }
                 val tempDonation = DonationWithDonationItems( Donation(titleText, descriptionText, "123"), donationItemList.toList() )
                 donationViewModel.insert(tempDonation)
+                Toast.makeText(context, "New Donation Request Added", Toast.LENGTH_SHORT).show()
+                findNavController().navigateUp()
             }
         }
     }
