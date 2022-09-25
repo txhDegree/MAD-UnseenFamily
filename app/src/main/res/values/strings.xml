@@ -21,6 +21,7 @@
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_up_short">Sign Up</string>
     <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
@@ -41,4 +42,15 @@
     <string name="title_required">Title is require</string>
     <string name="description_required">Description is require</string>
     <string name="items_required">Needed Items cannot be empty</string>
+
+    <string name="email">Type your Email</string>
+    <string name="password">Type Your Password</string>
+    <string name="retype_password">Retype Your Password</string>
+    <string name="not_account">Not Registered Yet , Sign Up !</string>
+    <string name="got_account">Already Registered , Sign In !</string>
+    <string name="or">or</string>
+    <string name="sign_with_google">Sign In With Google</string>
+    <string name="save">Save</string>
+
+    <string name="enter_message">Enter Message</string>
 </resources>
