@@ -3,6 +3,7 @@ package com.example.unseenfamily.families.add_request
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
@@ -58,8 +59,8 @@ class AddRequestFragment : Fragment() {
                 donationItemList.addAll(donationItems)
                 donationItemAdapter.setDonationItem(donationItems)
             }
+            (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.view_request)
         } else {
-
             binding.buttonAdd.setOnClickListener{
                 val item = binding.editTextNeededItem
                 val itemText = item.text.toString()
