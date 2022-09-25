@@ -11,8 +11,12 @@
         android:label="@string/my_request"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_nav_my_request_to_nav_add_request"
+            android:id="@+id/action_nav_home_to_nav_add_request"
             app:destination="@id/nav_add_request"
+            app:popUpTo="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_home_to_chatFragment"
+            app:destination="@id/chatFragment"
             app:popUpTo="@id/nav_home" />
     </fragment>
     <fragment
@@ -20,4 +24,9 @@
         android:name="com.example.unseenfamily.families.add_request.AddRequestFragment"
         android:label="@string/add_request"
         tools:layout="@layout/fragment_add_request" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.unseenfamily.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
 </navigation>

@@ -1,7 +1,5 @@
 package com.example.unseenfamily.repositories
 
-import android.provider.Settings
-import android.util.Log
 import androidx.annotation.WorkerThread
 import androidx.lifecycle.LiveData
 import com.example.unseenfamily.dao.DonationDao
@@ -112,15 +110,4 @@ class DonationRepository (private val donationDao: DonationDao, private val dona
             }
 
     }
-
-//    fun syncContact(id: String, contactList: List<Donation>){
-//        val db: DatabaseReference = Firebase.database.reference
-//
-//        for(contact in contactList.listIterator()){
-//            var target = db.child("contact").child(id)
-//            target.child("name").setValue(contact.name)
-//            target.child("phone").setValue(contact.phone)
-//        }
-//    }
-
 }

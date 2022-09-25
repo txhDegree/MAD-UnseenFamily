@@ -38,13 +38,13 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.floatingActionButtonAddRequest.setOnClickListener{
             donationViewModel.viewOnly = false
-            findNavController().navigate(R.id.action_nav_my_request_to_nav_add_request)
+            findNavController().navigate(R.id.action_nav_home_to_nav_add_request)
         }
 
         val vpAdapter = VPAdapter(activity?.supportFragmentManager!!, lifecycle, VPRecycleViewAdapter.DonationOnClickListener{ donation ->
             donationViewModel.viewOnly = true
             donationViewModel.selectedDonation = donation
-            findNavController().navigate(R.id.action_nav_my_request_to_nav_add_request)
+            findNavController().navigate(R.id.action_nav_home_to_nav_add_request)
         })
         binding.viewpager.adapter = vpAdapter
         TabLayoutMediator(binding.tabLayout, binding.viewpager){ tab, position->
@@ -72,6 +72,10 @@ class HomeFragment : Fragment() {
         return when(item.itemId) {
             R.id.action_sync -> {
                 donationViewModel.reload()
+                true
+            }
+            R.id.action_message -> {
+                findNavController().navigate(R.id.action_nav_home_to_chatFragment)
                 true
             }
             else -> false

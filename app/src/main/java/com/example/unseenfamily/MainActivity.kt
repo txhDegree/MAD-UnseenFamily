@@ -20,6 +20,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.unseenfamily.databinding.ActivityMainBinding
 import com.example.unseenfamily.repositories.DonationRepository
+import com.example.unseenfamily.viewModel.ChatViewModel
 import com.example.unseenfamily.viewModel.DonationItemViewModel
 import com.example.unseenfamily.viewModel.DonationViewModel
 import com.google.firebase.auth.FirebaseAuth
@@ -32,12 +33,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var donationViewModel: DonationViewModel
     private lateinit var donationItemViewModel: DonationItemViewModel
-
-    override fun onStart() {
-        super.onStart()
-
-    }
-
+    private lateinit var chatViewModel: ChatViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -48,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 
         donationViewModel = ViewModelProvider(this).get(DonationViewModel::class.java)
         donationItemViewModel = ViewModelProvider(this).get(DonationItemViewModel::class.java)
-
+        chatViewModel = ViewModelProvider(this).get(ChatViewModel::class.java)
 //        binding.appBarMain.fab.setOnClickListener { view ->
 //            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                .setAction("Action", null).show()

@@ -37,7 +37,7 @@
     <string name="title_hint">Enter title (e.g.: Daily Supplies)</string>
     <string name="delete">Delete</string>
     <string name="no_record">No Record Found</string>
-
+    <string name="sync">Sync</string>
     <string name="title_required">Title is require</string>
     <string name="description_required">Description is require</string>
     <string name="items_required">Needed Items cannot be empty</string>
