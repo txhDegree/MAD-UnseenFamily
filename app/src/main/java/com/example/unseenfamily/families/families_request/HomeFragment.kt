@@ -8,15 +8,15 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.unseenfamily.R
-import com.example.unseenfamily.databinding.FragmentFamiliesRequestsBinding
+import com.example.unseenfamily.databinding.FragmentHomeBinding
 import com.example.unseenfamily.families.families_request.tabs.VPAdapter
 import com.example.unseenfamily.families.families_request.tabs.VPRecycleViewAdapter
 import com.example.unseenfamily.viewModel.DonationViewModel
 import com.google.android.material.tabs.TabLayoutMediator
 
-class FamiliesRequestFragment : Fragment() {
+class HomeFragment : Fragment() {
 
-    private var _binding: FragmentFamiliesRequestsBinding? = null
+    private var _binding: FragmentHomeBinding? = null
     private val donationViewModel: DonationViewModel by activityViewModels()
 
     // This property is only valid between onCreateView and
@@ -28,13 +28,12 @@ class FamiliesRequestFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentFamiliesRequestsBinding.inflate(inflater, container, false)
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         binding.floatingActionButtonAddRequest.setOnClickListener{
             donationViewModel.viewOnly = false
             findNavController().navigate(R.id.action_nav_my_request_to_nav_add_request)

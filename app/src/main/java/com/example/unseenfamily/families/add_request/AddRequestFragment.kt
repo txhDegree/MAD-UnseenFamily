@@ -83,7 +83,7 @@ class AddRequestFragment : Fragment() {
                 }
                 val descriptionText = binding.editTextDescription.text.toString()
                 if(descriptionText.isEmpty()){
-                    binding.editTextDescription.error = getString(R.string.title_required)
+                    binding.editTextDescription.error = getString(R.string.description_required)
                     binding.editTextDescription.requestFocus()
                     return@setOnClickListener
                 }

@@ -24,6 +24,11 @@ class DonationItemRepository (private val donationItemDao: DonationItemDao) {
         donationItemDao.delete(donationItem)
     }
 
+    @WorkerThread
+    suspend fun deleteAll(){
+        donationItemDao.deleteAll()
+    }
+
     suspend fun findByDonationId(donationId: Long): LiveData<List<DonationItem>> {
         return donationItemDao.findByDonationId(donationId)
     }

@@ -42,6 +42,14 @@ class DonationViewModel (application: Application) : AndroidViewModel (applicati
         donationRepository.delete(donation)
     }
 
+    fun deleteAll() = viewModelScope.launch {
+        donationRepository.deleteAll()
+    }
+
+    fun reload() = viewModelScope.launch {
+        donationRepository.reload()
+    }
+
 //    fun syncContact(){
 //        donationRepository.syncContact("user1", contactList.value!!.toList())
 //    }

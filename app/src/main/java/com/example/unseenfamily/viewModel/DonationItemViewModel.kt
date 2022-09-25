@@ -33,6 +33,10 @@ class DonationItemViewModel (application: Application) : AndroidViewModel (appli
         donationItemRepository.delete(donationItem)
     }
 
+    fun deleteAll() = viewModelScope.launch {
+        donationItemRepository.deleteAll()
+    }
+
 //    fun syncContact(){
 //        donationRepository.syncContact("user1", contactList.value!!.toList())
 //    }

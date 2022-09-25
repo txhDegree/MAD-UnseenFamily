@@ -11,7 +11,7 @@
         android:id="@+id/imageView4"
         android:layout_width="15dp"
         android:layout_height="wrap_content"
-        android:tint="@color/ic_launcher_background"
+        app:tint="@color/ic_launcher_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

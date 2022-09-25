@@ -7,35 +7,14 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.unseenfamily.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_nav_home_to_donationDetailsFragment"
-            app:destination="@id/donationDetailsFragment" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/nav_donation_history"
-        android:name="com.example.unseenfamily.ui.donation_history.DonationHistoryFragment"
-        android:label="@string/donation_history"
-        tools:layout="@layout/fragment_donation_history" />
-
-    <fragment
-        android:id="@+id/nav_my_request"
-        android:name="com.example.unseenfamily.families.families_request.FamiliesRequestFragment"
+        android:name="com.example.unseenfamily.families.families_request.HomeFragment"
         android:label="@string/my_request"
-        tools:layout="@layout/fragment_families_requests" >
+        tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_nav_my_request_to_nav_add_request"
             app:destination="@id/nav_add_request"
-            app:popUpTo="@id/nav_my_request" />
+            app:popUpTo="@id/nav_home" />
     </fragment>
-    <fragment
-        android:id="@+id/donationDetailsFragment"
-        android:name="com.example.unseenfamily.ui.DonationDetailsFragment"
-        android:label="Donation Details"
-        tools:layout="@layout/fragment_donation_details"/>
     <fragment
         android:id="@+id/nav_add_request"
         android:name="com.example.unseenfamily.families.add_request.AddRequestFragment"

@@ -23,4 +23,7 @@ interface DonationItemDao {
     @Delete
     suspend fun delete (donationItem: DonationItem)
 
+    @Query("DELETE FROM donationItem")
+    suspend fun deleteAll ()
+
 }

@@ -1,4 +1,5 @@
 <resources>
+    <string name="firebase_google_client_id">1034136726990-dfmcc2g8p9pe5qgaqp96knorf2631q3n.apps.googleusercontent.com</string>
     <string name="app_name">UnseenFamily</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

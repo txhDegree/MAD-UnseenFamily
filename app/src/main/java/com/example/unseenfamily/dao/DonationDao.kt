@@ -37,4 +37,8 @@ interface DonationDao {
     @Delete
     suspend fun delete (donation: Donation)
 
+    // Delete all records
+    @Query("DELETE FROM donation")
+    suspend fun deleteAll ()
+
 }
