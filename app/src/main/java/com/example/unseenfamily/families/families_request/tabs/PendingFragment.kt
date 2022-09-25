@@ -26,7 +26,7 @@ class PendingFragment (private val itemsOnClickListener: VPRecycleViewAdapter.Do
     }
 
     override fun onResume() {
-        val recycleViewAdapter = VPRecycleViewAdapter(itemsOnClickListener)
+        val recycleViewAdapter = VPRecycleViewAdapter(itemsOnClickListener, requireContext())
 
         donationViewModel.pendingDonationList.observe(viewLifecycleOwner){
             if(it.isEmpty())

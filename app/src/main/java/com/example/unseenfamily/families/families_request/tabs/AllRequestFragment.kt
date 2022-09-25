@@ -27,7 +27,7 @@ class AllRequestFragment (private val itemsOnClickListener: VPRecycleViewAdapter
     }
 
     override fun onResume() {
-        val recycleViewAdapter = VPRecycleViewAdapter(itemsOnClickListener)
+        val recycleViewAdapter = VPRecycleViewAdapter(itemsOnClickListener, requireContext())
 
         donationViewModel.donationList.observe(viewLifecycleOwner){
             if(it.isEmpty())

@@ -2,6 +2,7 @@ package com.example.unseenfamily.families.families_request
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
@@ -28,6 +29,7 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        setHasOptionsMenu(true)
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -64,4 +66,16 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        super.onOptionsItemSelected(item)
+        return when(item.itemId) {
+            R.id.action_sync -> {
+                donationViewModel.reload()
+                true
+            }
+            else -> false
+        }
+    }
+
 }

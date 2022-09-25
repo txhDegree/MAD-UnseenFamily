@@ -20,12 +20,11 @@
         android:id="@+id/textViewDonationItemTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="Lee's Family"
+        android:layout_marginStart="8dp"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+        app:layout_constraintStart_toEndOf="@+id/imageViewStatus"
+        app:layout_constraintTop_toTopOf="@+id/imageViewStatus" />
 
     <TextView
         android:id="@+id/textViewDonationItemDescription"
@@ -33,10 +32,18 @@
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="TextView"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textViewDonationItemTitle"
+        app:layout_constraintStart_toStartOf="@+id/imageViewStatus"
         app:layout_constraintTop_toBottomOf="@+id/textViewDonationItemTitle" />
+
+    <ImageView
+        android:id="@+id/imageViewStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:srcCompat="@drawable/ic_baseline_cancel_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

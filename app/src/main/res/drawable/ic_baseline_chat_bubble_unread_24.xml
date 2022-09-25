@@ -1,0 +1,20 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="24dp"
+    android:viewportHeight="24" android:viewportWidth="24"
+    android:width="24dp"
+    >
+    <item
+        android:gravity="fill"
+        android:drawable="@drawable/ic_baseline_chat_bubble_24"
+        />
+    <item
+        android:height="7dp"
+        android:width="7dp"
+        android:top="1dp"
+        android:left="16dp"
+        >
+        <shape android:shape="oval">
+            <solid android:color="@color/red"/>
+        </shape>
+    </item>
+</layer-list>
