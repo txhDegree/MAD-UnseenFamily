@@ -75,7 +75,7 @@ class HomeFragment : Fragment() {
                 true
             }
             R.id.action_message -> {
-                findNavController().navigate(R.id.action_nav_home_to_chatFragment)
+                findNavController().navigate(R.id.action_nav_home_to_nav_chat)
                 true
             }
             else -> false

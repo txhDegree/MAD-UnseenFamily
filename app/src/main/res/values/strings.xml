@@ -56,4 +56,14 @@
     <string name="enter_message">Enter Message</string>
     <string name="chat_with_admin">Chat With Admin</string>
 
+    <string name="edit_profile">Edit Profile</string>
+
+    <string name="name">Name</string>
+    <string name="contact_no">Contact No.</string>
+    <string name="family_size">Family Size</string>
+
+    <string name="name_hint">Enter Name</string>
+    <string name="contact_no_hint">Enter Contact No.</string>
+    <string name="family_size_hint">Enter Family Size</string>
+
 </resources>
