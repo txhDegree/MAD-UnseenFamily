@@ -31,6 +31,7 @@
     <string name="description">Description</string>
     <string name="description_hint">Enter Description (e.g. purpose of this request, total approximate cost etc…)</string>
     <string name="add_request">Add Request</string>
+    <string name="view_request">View Request</string>
     <string name="needed_items">Needed Items</string>
     <string name="needed_list_hint">Specific brand</string>
     <string name="quantity_hint">Qty</string>
@@ -63,5 +64,17 @@
     <string name="all_request">All Requests</string>
     <string name="pending">Pending</string>
     <string name="completed">Completed</string>
+
+    <string name="chat_with_admin">Chat With Admin</string>
+
+    <string name="edit_profile">Edit Profile</string>
+
+    <string name="name">Name</string>
+    <string name="contact_no">Contact No.</string>
+    <string name="family_size">Family Size</string>
+
+    <string name="name_hint">Enter Name</string>
+    <string name="contact_no_hint">Enter Contact No.</string>
+    <string name="family_size_hint">Enter Family Size</string>
 
 </resources>

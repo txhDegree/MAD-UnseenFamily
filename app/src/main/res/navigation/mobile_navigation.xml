@@ -15,8 +15,12 @@
             app:destination="@id/nav_add_request"
             app:popUpTo="@id/nav_home" />
         <action
-            android:id="@+id/action_nav_home_to_chatFragment"
-            app:destination="@id/chatFragment"
+            android:id="@+id/action_nav_home_to_nav_chat"
+            app:destination="@id/nav_chat"
+            app:popUpTo="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_profile"
+            app:destination="@id/nav_profile"
             app:popUpTo="@id/nav_home" />
     </fragment>
     <fragment
@@ -25,8 +29,13 @@
         android:label="@string/add_request"
         tools:layout="@layout/fragment_add_request" />
     <fragment
-        android:id="@+id/chatFragment"
+        android:id="@+id/nav_chat"
         android:name="com.example.unseenfamily.ChatFragment"
-        android:label="fragment_chat"
+        android:label="@string/chat_with_admin"
         tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.unseenfamily.ProfileFragment"
+        android:label="@string/edit_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

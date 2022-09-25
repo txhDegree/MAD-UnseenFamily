@@ -17,9 +17,9 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
 import androidx.lifecycle.ViewModelProvider
 import com.example.unseenfamily.databinding.ActivityMainBinding
-import com.example.unseenfamily.repositories.DonationRepository
 import com.example.unseenfamily.viewModel.ChatViewModel
 import com.example.unseenfamily.viewModel.DonationItemViewModel
 import com.example.unseenfamily.viewModel.DonationViewModel
@@ -67,8 +67,12 @@ class MainActivity : AppCompatActivity() {
         val headerView = binding.navView.getHeaderView(0)
         val tvUsername = headerView.findViewById<TextView>(R.id.textViewUserName)
         val tvEmail = headerView.findViewById<TextView>(R.id.textViewEmail)
+        val ivProfileImg = headerView.findViewById<ImageView>(R.id.imageViewProfileImg)
+        ivProfileImg.setOnClickListener{
+            navController.navigate(R.id.action_nav_home_to_nav_profile)
+            binding.drawerLayout.closeDrawer(GravityCompat.START, true)
+        }
         if(!firebaseAuth.currentUser!!.photoUrl.toString().isNullOrBlank()){
-            val ivProfileImg = headerView.findViewById<ImageView>(R.id.imageViewProfileImg)
             val executor = Executors.newSingleThreadExecutor()
             val handler = Handler(Looper.getMainLooper())
             var image: Bitmap? = null
@@ -84,7 +88,6 @@ class MainActivity : AppCompatActivity() {
                     e.printStackTrace()
                 }
             }
-
         }
 
 

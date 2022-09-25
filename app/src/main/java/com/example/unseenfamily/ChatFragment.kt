@@ -23,7 +23,7 @@ class ChatFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        setHasOptionsMenu(false)
+        setHasOptionsMenu(true)
         _binding = FragmentChatBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -48,6 +48,12 @@ class ChatFragment : Fragment() {
         llm.stackFromEnd = true
         binding.recycleViewMessages.layoutManager = llm
         binding.recycleViewMessages.adapter = chatAdapter
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        menu.findItem(R.id.action_sync).isVisible = false
+        menu.findItem(R.id.action_message).isVisible = false
     }
 
     override fun onDestroyView() {

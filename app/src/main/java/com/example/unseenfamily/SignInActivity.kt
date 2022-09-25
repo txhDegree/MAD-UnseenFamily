@@ -2,6 +2,7 @@ package com.example.unseenfamily
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.unseenfamily.databinding.ActivitySignInBinding
@@ -15,6 +16,7 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 
 class SignInActivity : AppCompatActivity() {
@@ -24,6 +26,7 @@ class SignInActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySignInBinding
     private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var firestore: FirebaseFirestore
 
     private lateinit var oneTapClient: SignInClient
     private lateinit var signInRequest: BeginSignInRequest
@@ -52,8 +55,8 @@ class SignInActivity : AppCompatActivity() {
 
         googleSignInClient = GoogleSignIn.getClient(this, gso)
 
+        firestore = FirebaseFirestore.getInstance()
         firebaseAuth = Firebase.auth
-//        firebaseAuth = FirebaseAuth.getInstance()
         binding.textViewToSignUp.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
             finish()
@@ -69,6 +72,17 @@ class SignInActivity : AppCompatActivity() {
 
                 firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
                     if (it.isSuccessful) {
+                        if(it.result.additionalUserInfo!!.isNewUser){
+                            var phoneNumber = it.result.user!!.phoneNumber
+                            if(phoneNumber.isNullOrBlank())
+                                phoneNumber = ""
+                            firestore.collection("profile").document(it.result.user!!.uid).set(
+                                hashMapOf(
+                                    "family_size" to 0,
+                                    "contact_no" to phoneNumber
+                                )
+                            )
+                        }
                         val intent = Intent(this, MainActivity::class.java)
                         finish()
                         startActivity(intent)
@@ -94,6 +108,17 @@ class SignInActivity : AppCompatActivity() {
         firebaseAuth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
+                    if(task.result.additionalUserInfo!!.isNewUser){
+                        var phoneNumber = task.result.user!!.phoneNumber
+                        if(phoneNumber.isNullOrBlank())
+                            phoneNumber = ""
+                        firestore.collection("profile").document(task.result.user!!.uid).set(
+                            hashMapOf(
+                                "family_size" to 0,
+                                "contact_no" to phoneNumber
+                            )
+                        )
+                    }
                     val intent = Intent(this, MainActivity::class.java)
                     finish()
                     startActivity(intent)
