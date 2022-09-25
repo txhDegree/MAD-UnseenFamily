@@ -91,6 +91,7 @@ class AddRequestFragment : Fragment() {
                 }
                 if(donationItemList.isEmpty()){
                     Toast.makeText(context, getString(R.string.items_required), Toast.LENGTH_SHORT).show()
+                    return@setOnClickListener
                 }
                 val tempDonation = DonationWithDonationItems( Donation(titleText, descriptionText, "123"), donationItemList.toList() )
                 donationViewModel.insert(tempDonation)

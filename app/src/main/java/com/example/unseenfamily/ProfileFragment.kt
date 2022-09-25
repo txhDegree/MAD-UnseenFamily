@@ -113,6 +113,24 @@ class ProfileFragment : Fragment() {
         }
 
         binding.buttonSaveProfile.setOnClickListener{
+            if(binding.editTextName.text.toString().isNullOrBlank()) {
+                binding.editTextName.error = "Please enter your name"
+                binding.editTextName.requestFocus()
+                return@setOnClickListener
+            }
+
+            if(binding.editTextNumberFamily.text.toString().isNullOrBlank()) {
+                binding.editTextNumberFamily.error = "Please enter your family size"
+                binding.editTextNumberFamily.requestFocus()
+                return@setOnClickListener
+            }
+
+            if(binding.editTextPhone.text.toString().isNullOrBlank()) {
+                binding.editTextPhone.error = "Please enter your contact number"
+                binding.editTextPhone.requestFocus()
+                return@setOnClickListener
+            }
+
             val familySize = binding.editTextNumberFamily.text.toString().toInt()
             val contactNo = binding.editTextPhone.text.toString()
             firestore.collection("profile").document(user.uid).update(
@@ -137,7 +155,6 @@ class ProfileFragment : Fragment() {
                         }
                     }
             }
-
         }
     }
 
