@@ -77,7 +77,7 @@ class SignInActivity : AppCompatActivity() {
                     }
                 }
             } else {
-                binding.textViewSignInErrorMsg.text = "Empty Fields Are not Allowed !!"
+                binding.textViewSignInErrorMsg.text = getString(R.string.empty_field)
             }
         }
 
@@ -114,7 +114,7 @@ class SignInActivity : AppCompatActivity() {
                 firebaseAuthWithGoogle(account.idToken!!)
             } catch (e: ApiException) {
                 // Google Sign In failed, update UI appropriately
-                Toast.makeText(this, "Google sign in failed", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, getString(R.string.google_sign_in_fail), Toast.LENGTH_LONG).show()
             }
         }
     }

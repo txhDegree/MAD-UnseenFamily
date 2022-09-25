@@ -50,13 +50,13 @@ class HomeFragment : Fragment() {
         TabLayoutMediator(binding.tabLayout, binding.viewpager){ tab, position->
             when(position){
                 0 -> {
-                    tab.text = "All Requests"
+                    tab.text = getString(R.string.all_request)
                 }
                 1 -> {
-                    tab.text = "Pending"
+                    tab.text = getString(R.string.pending)
                 }
                 2 -> {
-                    tab.text = "Completed"
+                    tab.text = getString(R.string.completed)
                 }
             }
         }.attach()

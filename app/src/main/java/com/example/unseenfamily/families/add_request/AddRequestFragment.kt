@@ -72,7 +72,7 @@ class AddRequestFragment : Fragment() {
                 item.text.clear()
                 quantity.text.clear()
 
-                Toast.makeText(context, "Item Added", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, getString(R.string.item_added), Toast.LENGTH_SHORT).show()
             }
 
             binding.buttonSave.setOnClickListener {
@@ -93,7 +93,7 @@ class AddRequestFragment : Fragment() {
                 }
                 val tempDonation = DonationWithDonationItems( Donation(titleText, descriptionText, "123"), donationItemList.toList() )
                 donationViewModel.insert(tempDonation)
-                Toast.makeText(context, "New Donation Request Added", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, getString(R.string.new_donation_added), Toast.LENGTH_SHORT).show()
                 findNavController().navigateUp()
             }
         }

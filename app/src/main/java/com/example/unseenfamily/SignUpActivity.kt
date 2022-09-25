@@ -78,10 +78,10 @@ class SignUpActivity : AppCompatActivity() {
                         }
                     }
                 } else {
-                    binding.textViewSignUpErrorMsg.text = "Password is not matching"
+                    binding.textViewSignUpErrorMsg.text = getString(R.string.password_not_matching)
                 }
             } else {
-                binding.textViewSignUpErrorMsg.text = "Empty Fields Are not Allowed !!"
+                binding.textViewSignUpErrorMsg.text = getString(R.string.empty_field)
             }
         }
 
@@ -118,7 +118,7 @@ class SignUpActivity : AppCompatActivity() {
                 firebaseAuthWithGoogle(account.idToken!!)
             } catch (e: ApiException) {
                 // Google Sign In failed, update UI appropriately
-                Toast.makeText(this, "Google sign in failed", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, getString(R.string.google_sign_in_fail), Toast.LENGTH_LONG).show()
             }
         }
     }

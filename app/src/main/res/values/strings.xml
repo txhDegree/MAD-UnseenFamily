@@ -53,4 +53,15 @@
     <string name="save">Save</string>
 
     <string name="enter_message">Enter Message</string>
+    <string name="item_added">Item Added</string>
+    <string name="new_donation_added">New Donation Request Added</string>
+    <string name="empty_field">Empty Fields Are not Allowed !!</string>
+    <string name="google_sign_in_fail">Google sign in failed</string>
+    <string name="password_not_matching">Password is not matching</string>
+
+
+    <string name="all_request">All Requests</string>
+    <string name="pending">Pending</string>
+    <string name="completed">Completed</string>
+
 </resources>
